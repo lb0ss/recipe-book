@@ -2,6 +2,7 @@ import { Component, OnInit, Output } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
 import { EventEmitter } from 'events';
 import { TrustedHtmlString } from '@angular/core/src/sanitization/sanitization';
+
 @Component({
   selector: 'app-shopping-list',
   templateUrl: './shopping-list.component.html',
@@ -18,7 +19,10 @@ export class ShoppingListComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
+  onIngredientAdded(ingredient: Ingredient) {
+    this.ingredients.push(ingredient);
+  }
 
 
 }
