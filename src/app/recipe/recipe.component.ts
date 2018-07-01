@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Recipe } from './recipe.model';
+
 import { EventEmitter } from 'protractor';
 
 @Component({
@@ -7,7 +9,8 @@ import { EventEmitter } from 'protractor';
   styleUrls: ['./recipe.component.css']
 })
 export class RecipeComponent implements OnInit {
-
+  selectedRecipe: Recipe;
+  
   constructor() { }
 
   ngOnInit() {
