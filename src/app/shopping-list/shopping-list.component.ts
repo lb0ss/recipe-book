@@ -1,7 +1,6 @@
 import { Component, OnInit, Output } from '@angular/core';
 import { Ingredient } from '../shared/ingredient.model';
-import { EventEmitter } from 'events';
-import { TrustedHtmlString } from '@angular/core/src/sanitization/sanitization';
+import { ShoppingListService } from './shopping.list.service';
 
 @Component({
   selector: 'app-shopping-list',
@@ -9,15 +8,12 @@ import { TrustedHtmlString } from '@angular/core/src/sanitization/sanitization';
   styleUrls: ['./shopping-list.component.css']
 })
 export class ShoppingListComponent implements OnInit {
+  ingredients: Ingredient[];
 
-
-  ingredients: Ingredient[] = [
-    new Ingredient('Apples', 5),
-    new Ingredient('Tomatoes', 10),
-  ];
-  constructor() { }
+  constructor(private slService: ShoppingListService) { }
 
   ngOnInit() {
+    this.ingredients = this.slService.getIngredients();
   }
   
   onIngredientAdded(ingredient: Ingredient) {

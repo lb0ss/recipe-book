@@ -6,6 +6,8 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+
+//Proerty below
 @Output () featureSelected = new EventEmitter<string>();
 
   constructor() { }
