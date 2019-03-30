@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Recipe } from './recipe.model';
-
-import { EventEmitter } from 'protractor';
 import { RecipeService } from './recipe.service';
 
 @Component({
