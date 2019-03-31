@@ -1,13 +1,10 @@
-import { EventEmitter, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { Recipe } from './recipe.model';
 import { Ingredient } from '../shared/ingredient.model';
 import { ShoppingListService } from '../shopping-list/shopping.list.service';
 
 @Injectable()
-export class RecipeService {
-    // for cross-component communication that a recipe is selected
-    recipeSelected = new EventEmitter<Recipe>();
-    
+export class RecipeService {    
     // for populating the recipe data
     recipes: Recipe[] = [
         new Recipe(
