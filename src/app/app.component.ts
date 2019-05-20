@@ -12,7 +12,7 @@ loadedFeature = 'recipes';
 constructor() {
   firebase.initializeApp({
     apiKey: 'AIzaSyCvhsAPcJsx7HlLVC1GCUMopNNZGzr6TkY',
-    authDomain: 'ng-recipe-book.firebaseapp.com'
+    authDomain: 'ng-recipe-book-acf20.firebaseapp.com'
   });
 }
 
