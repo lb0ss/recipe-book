@@ -23,7 +23,6 @@ import { CoreModule } from './core/core.module';
     SharedModule,
     CoreModule
   ],
-  providers: [ShoppingListService, RecipeService, DataStorageService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
